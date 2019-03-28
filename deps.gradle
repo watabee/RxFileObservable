@@ -1,0 +1,17 @@
+ext {
+    versions = [
+        'minSdk': 16,
+        'targetSdk': 28,
+        'compileSdk': 28,
+
+        'kotlin' : '1.3.21',
+    ]
+
+    deps = [
+        'kotlin': [
+            'stdlib': "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+        ],
+
+        'rxjava': "io.reactivex.rxjava2:rxjava:2.2.8",
+    ]
+}

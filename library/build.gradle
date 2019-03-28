@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion versions.compileSdk
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+}
+
+dependencies {
+    api deps.rxjava
+}
+
+publish {
+    userOrg = 'watabee'
+    groupId = 'com.github.watabee'
+    artifactId = 'rx-file-observable'
+    publishVersion = getProperty('VERSION')
+    desc = 'RxJava file bindings for Android'
+    website = 'https://github.com/watabee/RxFileObservable'
+}
