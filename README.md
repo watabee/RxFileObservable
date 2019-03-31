@@ -1,5 +1,5 @@
 # RxFileObservable
-[![Release](https://img.shields.io/badge/jcenter-0.1.0-blue.svg)](https://bintray.com/watabee/maven/rx-file-observable)
+[![Release](https://img.shields.io/badge/jcenter-0.2.0-blue.svg)](https://bintray.com/watabee/maven/rx-file-observable)
 
 [RxJava](https://github.com/ReactiveX/RxJava) file bindings for Android
 
@@ -11,12 +11,27 @@ implementation "com.github.watabee:rx-file-observable:<latest-version>"
 
 ## Usage
 
-- `exists()`
+### events
+
+You can receive file events that are corresponds to [android.os.FileObserver](https://developer.android.com/reference/android/os/FileObserver) events.
 
 Example
 
 ```
-RxFileObservable.exists("A file path to watch")
+RxFileObservable.events(File(context.filesDir, "sample.txt").path)
+  .observeOn(AndroidSchedulers.mainThread())
+  .subscribe(fileEvent -> ...);
+```
+
+
+### exists
+
+You can receive whether specified file exists.
+
+Example
+
+```
+RxFileObservable.exists(context.filesDir.path, "sample.txt")
   .observeOn(AndroidSchedulers.mainThread())
   .subscribe(exists -> ...);
 ```

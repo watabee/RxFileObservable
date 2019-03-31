@@ -19,13 +19,13 @@ import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.rxkotlin.withLatestFrom
 import java.io.File
 
-class MainActivity : AppCompatActivity() {
+class FileExistsSampleActivity : AppCompatActivity() {
 
     private val disposable = CompositeDisposable()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_file_exists_sample)
 
         setup(
             textFile = File(filesDir, "sample.txt"),
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         @IdRes textResId: Int,
         @IdRes buttonResId: Int
     ) {
-        val existsFile = RxFileObservable.exists(textFile.path)
+        val existsFile = RxFileObservable.exists(textFile.parent, textFile.name)
             .observeOn(AndroidSchedulers.mainThread())
             .share()
 
