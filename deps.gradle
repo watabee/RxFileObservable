@@ -8,10 +8,20 @@ ext {
     ]
 
     deps = [
-        'kotlin': [
+        'kotlin'  : [
             'stdlib': "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
         ],
 
-        'rxjava': "io.reactivex.rxjava2:rxjava:2.2.8",
+        'androidx': [
+            'test': [
+                'runner': "androidx.test:runner:1.1.0",
+                'rules' : "androidx.test:rules:1.1.0",
+                'junit' : "androidx.test.ext:junit:1.0.0",
+                'truth' : "androidx.test.ext:truth:1.1.0",
+                'orchestrator': "androidx.test:orchestrator:1.1.0",
+            ],
+        ],
+
+        'rxjava'  : "io.reactivex.rxjava2:rxjava:2.2.8",
     ]
 }
