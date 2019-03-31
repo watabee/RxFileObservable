@@ -7,7 +7,7 @@
     android:divider="@drawable/divider"
     android:orientation="vertical"
     android:showDividers="middle"
-    tools:context=".MainActivity">
+    tools:context=".FileExistsSampleActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
