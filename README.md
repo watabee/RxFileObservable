@@ -1,5 +1,5 @@
 # RxFileObservable
-[![Release](https://img.shields.io/badge/jcenter-0.2.0-blue.svg)](https://bintray.com/watabee/maven/rx-file-observable)
+[![Release](https://img.shields.io/badge/jcenter-0.2.1-blue.svg)](https://bintray.com/watabee/maven/rx-file-observable)
 
 [RxJava](https://github.com/ReactiveX/RxJava) file bindings for Android
 
