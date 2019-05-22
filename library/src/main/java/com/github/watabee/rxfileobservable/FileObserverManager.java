@@ -65,7 +65,7 @@ class FileObserverManager {
                             return;
                         }
 
-                        synchronized (this) {
+                        synchronized (Holder.this) {
                             for (final FileEventListener l : listeners) {
                                 l.onEvent(fileEvent);
                             }
